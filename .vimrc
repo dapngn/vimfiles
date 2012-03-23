@@ -8,15 +8,12 @@ function! <SID>SynStack()
     echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 
-" if compiled with syntax
-if has("syntax")
-    " set syntax highlighting on
-    syntax enable
-endif
+call pathogen#infect('~\src\vimfiles\vimfiles\bundle')
 
-call pathogen#infect()
+" set syntax highlighting on
+syntax enable
 
-" assumes vim will be running
+" force background mode to dark 
 set background=dark
 
 " nice built-in dark colorscheme
@@ -25,6 +22,7 @@ if has("gui_running")
 else
 	colorscheme desertcustom
 endif
+
 " set hard line break at 79 cols
 set textwidth=79
 
