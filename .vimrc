@@ -114,9 +114,9 @@ if has("autocmd")
     autocmd FileType cs setlocal ts=4 sts=4 sw=4 cindent
     
     " map xml type files to xml
-    autocmd BufNewFile *.rss,*.atom,*.csproj,*.csproj.user setfiletype xml
-    autocmd BufRead *.rss,*.atom,*.csproj,*.csproj.user setfiletype xml
-		au Filetype html,xml,xsl source ~/vimfiles/scripts/closetag.vim  
+    autocmd BufNewFile *.rss,*.atom,*.csproj,*.csproj.user,*.msbuild,*.config setfiletype xml
+    autocmd BufRead *.rss,*.atom,*.csproj,*.csproj.user,*.msbuild,*.config setfiletype xml
+		"au Filetype html,xml,xsl source ~/vimfiles/scripts/closetag.vim  
 endif
 
 " Super tab settings
