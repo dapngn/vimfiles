@@ -22,3 +22,6 @@
 [submodule "vimfiles/bundle/vim-javascript"]
 	path = vimfiles/bundle/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
+[submodule "vimfiles/bundle/DirDiff"]
+	path = vimfiles/bundle/DirDiff
+	url = https://github.com/vim-scripts/DirDiff.vim.git
