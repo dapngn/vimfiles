@@ -121,3 +121,6 @@ endif
 
 " Super tab settings
 let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+
+" set dir dif file exclusion
+let g:DirDiffExcludes = "bin,obj,.git,*.suo,*.user,*.dll,*.pdb"
