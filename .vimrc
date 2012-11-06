@@ -48,7 +48,7 @@ set hidden
 " set list
 
 " let mapleader: sets the <leader> variable in mapping directives
-let mapleader = ","
+"let mapleader = ","
 
 " Map leader + (HJKL) to move to open windows
 map <leader>h <C-w>h
