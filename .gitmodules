@@ -1,6 +1,3 @@
-[submodule "vimfiles/bundle/vim-surround"]
-	path = vimfiles/bundle/vim-surround
-	url = https://github.com/tpope/vim-surround.git
 [submodule "vimfiles/bundle/vim-color-solarized"]
 	path = vimfiles/bundle/vim-color-solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
@@ -28,3 +25,6 @@
 [submodule "vimfiles/bundle/mustache"]
 	path = vimfiles/bundle/mustache
 	url = https://github.com/juvenn/mustache.vim.git
+[submodule "vimfiles/bundle/zencoding-vim"]
+	path = vimfiles/bundle/zencoding-vim
+	url = https://github.com/mattn/zencoding-vim.git
