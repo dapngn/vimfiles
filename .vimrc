@@ -82,13 +82,13 @@ nmap ; :
 "set expandtab
 
 " tabstop/ts: sets the width of a tab character
-set tabstop=4
+set tabstop=2
 
 " softtabstop/sts: sets the width of a tab when expandtab is enabled
 "set softtabstop=4
 
 " shiftwidth/sw: sets the width within normal mode indentation commands
-set shiftwidth=4
+set shiftwidth=2
 
 " filetype: Enables filetype detection on buffer load
 set filetype=on
