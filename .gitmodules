@@ -13,9 +13,6 @@
 [submodule "vimfiles/bundle/vim-css-color"]
 	path = vimfiles/bundle/vim-css-color
 	url = https://github.com/skammer/vim-css-color.git
-[submodule "vimfiles/bundle/vim-matchit"]
-	path = vimfiles/bundle/vim-matchit
-	url = https://github.com/edsono/vim-matchit.git
 [submodule "vimfiles/bundle/vim-javascript"]
 	path = vimfiles/bundle/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
