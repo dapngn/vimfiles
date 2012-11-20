@@ -109,14 +109,15 @@ if has("autocmd")
     " Per file settings white-space settings  
     autocmd FileType css setlocal ts=2 sts=2 sw=2 omnifunc=csscomplete#CompleteCSS
     autocmd FileType html setlocal ts=2 sts=2 sw=2 omnifunc=htmlcomplete#CompleteTags
-	autocmd FileType javascript setlocal ts=2 sts=2 sw=2 cindent omnifunc=javascriptcomplete#CompleteJS
+		autocmd FileType javascript setlocal ts=2 sts=2 sw=2 cindent omnifunc=javascriptcomplete#CompleteJS
     autocmd FileType python setlocal ts=4 sts=4 sw=4 cindent
     autocmd FileType cs setlocal ts=4 sts=4 sw=4 cindent
     
     " map xml type files to xml
     autocmd BufNewFile *.rss,*.atom,*.csproj,*.csproj.user,*.msbuild,*.config setfiletype xml
     autocmd BufRead *.rss,*.atom,*.csproj,*.csproj.user,*.msbuild,*.config setfiletype xml
-		"au Filetype html,xml,xsl source ~/vimfiles/scripts/closetag.vim  
+    " autocmd BufNewFile *.scss,*.sass setfiletype css 
+    " autocmd BufRead *.scss,*.sass setfiletype css 
 endif
 
 " Super tab settings
