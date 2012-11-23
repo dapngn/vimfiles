@@ -47,7 +47,7 @@ set hidden
 " Turn on hiddens by default
 " set list
 
-" let mapleader: sets the <leader> variable in mapping directives
+" let mapleader: sets the <leader> variable in mapping directives default is \
 "let mapleader = ","
 
 " Map leader + (HJKL) to move to open windows
@@ -75,7 +75,7 @@ nmap <leader>e :Explore<CR>
 " map semi-colon to colon
 nmap ; :
 
-"
+" super tab already does this
 "imap <tab> <C-X><C-O>
 
 " expandtab/et: sets whether spaces are used rather than the tab character
@@ -96,6 +96,12 @@ set filetype=on
 " autoindent: simple indention based on the previous line's indent level
 set autoindent
 
+" Basic brace pair completion from http://vim.wikia.com/wiki/VimTip630#Plugins 
+inoremap {      {}<Left>
+inoremap {<CR>  {<CR>}<Esc>O
+inoremap {{     {
+inoremap {}     {}
+
 " enables per filetype auto indention rules
 filetype plugin on
 filetype indent on
@@ -114,11 +120,9 @@ if has("autocmd")
     autocmd FileType cs setlocal ts=4 sts=4 sw=4 cindent
     
     " map xml type files to xml
-    autocmd BufNewFile *.rss,*.atom,*.csproj,*.csproj.user,*.msbuild,*.config setfiletype xml
-    autocmd BufRead *.rss,*.atom,*.csproj,*.csproj.user,*.msbuild,*.config setfiletype xml
-    " autocmd BufNewFile *.scss,*.sass setfiletype css 
-    " autocmd BufRead *.scss,*.sass setfiletype css 
-endif
+    autocmd BufNewFile,BufRead *.rss,*.atom,*.csproj,*.csproj.user,*.msbuild,*.config setfiletype xml
+		autocmd BufNewFile,BufRead *.scss setfiletype scss
+	endif
 
 " Super tab settings
 let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
@@ -126,4 +130,5 @@ let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 " set dir dif file exclusion
 let g:DirDiffExcludes = "bin,obj,.git,*.suo,*.user,*.dll,*.pdb,*.swp"
 
-let g:user_zen_leader_key = "<c-z>"
+" Alt mappings can be weird in VIM, but this matches VS
+let g:user_zen_expandabbr_key="<A-z>"
