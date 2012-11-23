@@ -28,3 +28,6 @@
 [submodule "vimfiles/bundle/scss-syntax"]
 	path = vimfiles/bundle/scss-syntax
 	url = https://github.com/cakebaker/scss-syntax.vim.git
+[submodule "vimfiles/bundle/CSSComb-for-Vim"]
+	path = vimfiles/bundle/CSSComb-for-Vim
+	url = https://github.com/miripiruni/CSScomb-for-Vim.git
