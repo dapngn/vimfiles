@@ -14,13 +14,14 @@ call pathogen#infect('~\src\vimfiles\vimfiles\bundle')
 syntax enable
 
 " force background mode to dark 
-set background=dark
+"set background=dark
 
-" nice built-in dark colorscheme
+colorscheme desert
+
+" gvim settings 
 if has("gui_running") 
 	colorscheme solarized
-else
-	colorscheme desertcustom
+	set guifont=Lucida_Console:h11:cANSI
 endif
 
 " set hard line break at 79 cols
