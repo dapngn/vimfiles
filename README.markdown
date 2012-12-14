@@ -1,4 +1,4 @@
-vimfilest
+vimfiles
 ========
 
 Features
