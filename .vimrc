@@ -8,7 +8,7 @@ function! <SID>SynStack()
     echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 
-call pathogen#infect('~\src\vimfiles\vimfiles\bundle')
+call pathogen#infect('~/src/vimfiles/vimfiles/bundle')
 
 " set syntax highlighting on
 syntax enable
@@ -131,5 +131,7 @@ let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 " set dir dif file exclusion
 let g:DirDiffExcludes = "bin,obj,.git,*.suo,*.user,*.dll,*.pdb,*.swp"
 
-" Alt mappings can be weird in VIM, but this matches VS
-let g:user_zen_expandabbr_key="<A-z>"
+" mappings can be weird in VIM, but this matches VS
+let g:user_zen_expandabbr_key = '<c-e>' 
+let g:use_zen_complete_tag = 1
+
