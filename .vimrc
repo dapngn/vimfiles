@@ -8,6 +8,7 @@ function! <SID>SynStack()
     echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 
+" This works on *nix and windows machines, ymmv with backslash
 call pathogen#infect('~/src/vimfiles/vimfiles/bundle')
 
 " set syntax highlighting on
