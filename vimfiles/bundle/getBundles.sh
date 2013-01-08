@@ -1,0 +1,12 @@
+git clone https://github.com/vim-scripts/DirDiff.vim.git
+git clone https://github.com/othree/html5.vim.git
+git clone https://github.com/vim-scripts/jsbeautify.git
+git clone https://github.com/fholgado/minibufexpl.vim.git
+git clone https://github.com/cakebaker/scss-syntax.vim.git
+git clone https://github.com/ervandew/supertab.git
+git clone https://github.com/altercation/vim-colors-solarized.git
+git clone https://github.com/skammer/vim-css-color.git
+git clone https://github.com/pangloss/vim-javascript.git
+git clone https://github.com/dmitry-ilyashevich/vim-typescript.git
+git clone https://github.com/mattn/zencoding-vim.git
+git clone https://github.com/tmhedberg/matchit
