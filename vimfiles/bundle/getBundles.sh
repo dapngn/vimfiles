@@ -10,3 +10,5 @@ git clone https://github.com/pangloss/vim-javascript.git
 git clone https://github.com/dmitry-ilyashevich/vim-typescript.git
 git clone https://github.com/mattn/zencoding-vim.git
 git clone https://github.com/tmhedberg/matchit
+git clone https://github.com/hail2u/vim-css3-syntax.git
+git clone https://github.com/scrooloose/nerdtree.git

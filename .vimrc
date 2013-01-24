@@ -50,7 +50,7 @@ set hidden
 " set list
 
 " let mapleader: sets the <leader> variable in mapping directives default is \
-"let mapleader = ","
+let mapleader = ","
 
 " Map leader + (HJKL) to move to open windows
 map <leader>h <C-w>h
@@ -72,7 +72,7 @@ endif
 nmap <leader>sl :set list!<CR>
 
 " open a new horizontal window, already in explore mode
-nmap <leader>e :Explore<CR>
+nmap <leader>e :NERDTreeToggle<CR>
 
 " map semi-colon to colon
 nmap ; :
@@ -133,6 +133,6 @@ let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 let g:DirDiffExcludes = "bin,obj,.git,*.suo,*.user,*.dll,*.pdb,*.swp"
 
 " mappings can be weird in VIM, but this matches VS
-let g:user_zen_expandabbr_key = '<c-e>' 
+let g:user_zen_expandabbr_key = "<leader>e" 
 let g:use_zen_complete_tag = 1
 
