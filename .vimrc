@@ -64,7 +64,10 @@ map <C-l> :bn<CR>
 
 " my experience is that window only windows needs this
 if has("win32")
-    set backspace=eol,start,indent
+
+	" backspace and cursor keys wrap to previous/next line
+	set backspace=indent,eol,start whichwrap+=<,>,[,]
+
 endif
 
 " nmap: normal mode mapping
