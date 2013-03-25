@@ -75,7 +75,7 @@ endif
 nmap <leader>sl :set list!<CR>
 
 " open a new horizontal window, already in explore mode
-nmap <leader>e :NERDTreeToggle<CR>
+"nmap <leader>e :NERDTreeToggle<CR>
 
 " map semi-colon to colon
 nmap ; :
@@ -125,7 +125,7 @@ if has("autocmd")
     autocmd FileType cs setlocal ts=4 sts=4 sw=4 cindent
     
     " map xml type files to xml
-    autocmd BufNewFile,BufRead *.rss,*.atom,*.csproj,*.csproj.user,*.msbuild,*.config setfiletype xml
+    autocmd BufNewFile,BufRead *.rss,*.atom,*.csproj,*.csproj.user,*.msbuild,*.config,*.proj setfiletype xml
 		autocmd BufNewFile,BufRead *.scss setfiletype scss
 	endif
 
@@ -138,4 +138,3 @@ let g:DirDiffExcludes = "bin,obj,.git,*.suo,*.user,*.dll,*.pdb,*.swp"
 " mappings can be weird in VIM, but this matches VS
 let g:user_zen_expandabbr_key = "<leader>e" 
 let g:use_zen_complete_tag = 1
-
