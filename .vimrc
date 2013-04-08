@@ -20,9 +20,15 @@ syntax enable
 colorscheme desert
 
 " gvim settings 
-if has("gui_running") 
+if has("gui_running")
 	colorscheme solarized
-	set guifont=Lucida_Console:h11:cANSI
+	if has("gui_macvim")
+		set guifont=Monaco:h13
+	elseif has("gui_win32")
+		set guifont=Lucida_Console:h11:cANSI
+	elseif has("gui_win32")
+		set guifont=Monaco:h16
+	endif
 endif
 
 " set hard line break at 79 cols
