@@ -7,6 +7,19 @@ function! <SID>SynStack()
     endif
     echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
+nmap <C-F> :call <SID>FormatElements()<CR>
+function! <SID>FormatElements()
+		if !exists("*formatelements")
+		:%s/<[^>]*>/\r&\r/g
+		:g/^\s*$/d
+		:execute "normal gg=G" 
+		endif
+		endfunc
+
+" map leader
+let mapleader = ","
+
+runtime macros/matchit.vim  " enables % to cycle through `if/else/endif`
 
 " This works on *nix and windows machines, ymmv with backslash
 call pathogen#infect('~/src/vimfiles/vimfiles/bundle')
@@ -15,7 +28,7 @@ call pathogen#infect('~/src/vimfiles/vimfiles/bundle')
 syntax enable
 
 " force background mode to dark 
-"set background=dark
+set background=dark
 
 colorscheme desert
 
@@ -49,14 +62,8 @@ set ruler
 " highlights search results as you are typing text
 set incsearch
 
-" Automatically create hidden buffers on unsaved exit
+" Automatically create hidden buffers on leaving unsaved buffer 
 set hidden
-
-" Turn on hiddens by default
-" set list
-
-" let mapleader: sets the <leader> variable in mapping directives default is \
-let mapleader = ","
 
 " Map leader + (HJKL) to move to open windows
 map <leader>h <C-w>h
@@ -68,26 +75,19 @@ map <leader>l <C-w>l
 map <C-h> :bp<CR>
 map <C-l> :bn<CR>
 
-" my experience is that window only windows needs this
-if has("win32")
+nmap <leader>c gcc
+nmap <leader>C gc
+nmap <leader>u gcu
 
-	" backspace and cursor keys wrap to previous/next line
-	set backspace=indent,eol,start whichwrap+=<,>,[,]
-
-endif
+" backspace and cursor keys wrap to previous/next line
+set backspace=indent,eol,start whichwrap+=<,>,[,]
 
 " nmap: normal mode mapping
 " list: shows invisisble charactesrs e.g. carriage returns
 nmap <leader>sl :set list!<CR>
 
-" open a new horizontal window, already in explore mode
-"nmap <leader>e :NERDTreeToggle<CR>
-
 " map semi-colon to colon
 nmap ; :
-
-" super tab already does this
-"imap <tab> <C-X><C-O>
 
 " expandtab/et: sets whether spaces are used rather than the tab character
 "set expandtab
@@ -107,15 +107,10 @@ set filetype=on
 " autoindent: simple indention based on the previous line's indent level
 set autoindent
 
-" Basic brace pair completion from http://vim.wikia.com/wiki/VimTip630#Plugins 
-inoremap {      {}<Left>
-inoremap {<CR>  {<CR>}<Esc>O
-inoremap {{     {
-inoremap {}     {}
-
 " enables per filetype auto indention rules
 filetype plugin on
 filetype indent on
+set smartindent
 
 " if compiled with autocmd
 if has("autocmd")
@@ -137,10 +132,6 @@ if has("autocmd")
 
 " Super tab settings
 let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
-
-" set dir dif file exclusion
 let g:DirDiffExcludes = "bin,obj,.git,*.suo,*.user,*.dll,*.pdb,*.swp"
-
-" mappings can be weird in VIM, but this matches VS
 let g:user_zen_expandabbr_key = "<leader>e" 
 let g:use_zen_complete_tag = 1
