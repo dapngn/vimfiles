@@ -7,6 +7,7 @@ function! <SID>SynStack()
     endif
     echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
+
 nmap <C-F> :call <SID>FormatElements()<CR>
 function! <SID>FormatElements()
 		if !exists("*formatelements")
@@ -15,6 +16,18 @@ function! <SID>FormatElements()
 		:execute "normal gg=G" 
 		endif
 		endfunc
+
+" nmap <C-M> :call <SID>SERVEMD()<CR>
+" function! <SID>SERVEMD()
+" 		if !exists("*SERVERMD")
+" 			if %
+" 				!maruku %	
+" 			endif
+" 		endif
+" 		endfunc
+
+"set shell=powershell
+"set shellcmdflag=-command		
 
 " map leader
 let mapleader = ","
@@ -126,7 +139,7 @@ if has("autocmd")
     autocmd FileType cs setlocal ts=4 sts=4 sw=4 cindent
     
     " map xml type files to xml
-    autocmd BufNewFile,BufRead *.rss,*.atom,*.csproj,*.csproj.user,*.msbuild,*.config,*.proj setfiletype xml
+    autocmd BufNewFile,BufRead *.rss,*.atom,*.csproj,*.csproj.user,*.msbuild,*.config,*.proj,*.targets setfiletype xml
 		autocmd BufNewFile,BufRead *.scss setfiletype scss
 	endif
 

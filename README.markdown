@@ -3,8 +3,7 @@ vimfiles
 
 Features
 ---------
-Vim configuration that uses<a
-href="https://github.com/tpope/vim-pathogen">pathogen</a> as the plugin manager.
+Vim configuration that uses [pathogen](https://github.com/tpope/vim-pathogen) as the plugin manager.
 
 Usage
 -----
