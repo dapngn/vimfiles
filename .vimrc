@@ -85,6 +85,8 @@ set backspace=indent,eol,start whichwrap+=<,>,[,]
 " list: shows invisisble charactesrs e.g. carriage returns
 nmap <leader>sl :set list!<CR>
 
+nmap <leader>q :xa<CR>
+
 " map semi-colon to colon
 nmap ; :
 
