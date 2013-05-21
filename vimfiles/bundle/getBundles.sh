@@ -23,3 +23,4 @@ clonepull https://github.com/pangloss/vim-javascript.git vim-javascript
 clonepull https://github.com/tpope/vim-surround.git vim-surround
 clonepull https://github.com/mattn/zencoding-vim.git zencoding-vim
 clonepull https://github.com/PProvost/vim-ps1.git vim-ps1
+clonepull https://github.com/RussMartinez/watch-and-reload.git watch-and-reload 

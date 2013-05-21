@@ -8,27 +8,6 @@ function! <SID>SynStack()
     echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 
-nmap <C-F> :call <SID>FormatElements()<CR>
-function! <SID>FormatElements()
-		if !exists("*formatelements")
-		:%s/<[^>]*>/\r&\r/g
-		:g/^\s*$/d
-		:execute "normal gg=G" 
-		endif
-		endfunc
-
-" nmap <C-M> :call <SID>SERVEMD()<CR>
-" function! <SID>SERVEMD()
-" 		if !exists("*SERVERMD")
-" 			if %
-" 				!maruku %	
-" 			endif
-" 		endif
-" 		endfunc
-
-"set shell=powershell
-"set shellcmdflag=-command		
-
 " map leader
 let mapleader = ","
 
@@ -57,6 +36,9 @@ if has("gui_running")
 	endif
 endif
 
+" autoread
+set autoread
+
 " set hard line break at 79 cols
 set textwidth=79
 
@@ -84,6 +66,9 @@ map <leader>j <C-w>j
 map <leader>k <C-w>k
 map <leader>l <C-w>l
 
+" 
+map <leader>w :WatchForChanges<CR>
+
 " Map Control + (hl) to cycle though open buffers
 map <C-h> :bp<CR>
 map <C-l> :bn<CR>
@@ -91,6 +76,7 @@ map <C-l> :bn<CR>
 nmap <leader>c gcc
 nmap <leader>C gc
 nmap <leader>u gcu
+
 
 " backspace and cursor keys wrap to previous/next line
 set backspace=indent,eol,start whichwrap+=<,>,[,]
@@ -130,8 +116,8 @@ if has("autocmd")
 
     " autocmd FileType: executes the command on matching filetype
     " setlocal:  applies the command to the currently loaded buffer
-
-    " Per file settings white-space settings  
+		
+		" Per file settings white-space settings  
     autocmd FileType css setlocal ts=2 sts=2 sw=2 omnifunc=csscomplete#CompleteCSS
     autocmd FileType html setlocal ts=2 sts=2 sw=2 omnifunc=htmlcomplete#CompleteTags
 		autocmd FileType javascript setlocal ts=2 sts=2 sw=2 cindent omnifunc=javascriptcomplete#CompleteJS
@@ -140,7 +126,8 @@ if has("autocmd")
     
     " map xml type files to xml
     autocmd BufNewFile,BufRead *.rss,*.atom,*.csproj,*.csproj.user,*.msbuild,*.config,*.proj,*.targets setfiletype xml
-		autocmd BufNewFile,BufRead *.scss setfiletype scss
+		autocmd BufNewFile,BufRead,BufWrite *.scss set filetype=scss
+		autocmd BufWritePost *.scss :checktime *.css 
 	endif
 
 " Super tab settings
