@@ -22,11 +22,10 @@ syntax enable
 " force background mode to dark 
 set background=dark
 
-colorscheme desert
+colorscheme solarized
 
-" gvim settings 
+" gvim settings
 if has("gui_running")
-	colorscheme solarized
 	if has("gui_macvim")
 		set guifont=Monaco:h13
 	elseif has("gui_win32")
@@ -121,7 +120,7 @@ if has("autocmd")
 		
 		" Per file settings white-space settings  
     autocmd FileType css setlocal ts=2 sts=2 sw=2 omnifunc=csscomplete#CompleteCSS
-    autocmd FileType html setlocal ts=2 sts=2 sw=2 omnifunc=htmlcomplete#CompleteTags
+    autocmd FileType html setlocal ts=2 sw=2 omnifunc=htmlcomplete#CompleteTags
 		autocmd FileType javascript setlocal ts=2 sts=2 sw=2 cindent omnifunc=javascriptcomplete#CompleteJS
     autocmd FileType python setlocal ts=4 sts=4 sw=4 cindent
     autocmd FileType cs setlocal ts=4 sts=4 sw=4 cindent
