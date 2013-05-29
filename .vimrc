@@ -60,17 +60,17 @@ set incsearch
 set hidden
 
 " Map leader + (HJKL) to move to open windows
-map <leader>h <C-w>h
-map <leader>j <C-w>j
-map <leader>k <C-w>k
-map <leader>l <C-w>l
+map <leader><leader>h <C-w>h
+map <leader><leader>j <C-w>j
+map <leader><leader>k <C-w>k
+map <leader><leader>l <C-w>l
 
 " 
 map <leader>w :WatchForChanges<CR>
 
 " Map Control + (hl) to cycle though open buffers
-map <C-h> :bp<CR>
-map <C-l> :bn<CR>
+map <leader> :bp<CR>
+map <leader> :bn<CR>
 
 nmap <leader>c gcc
 nmap <leader>C gc
