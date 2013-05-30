@@ -69,8 +69,8 @@ map <leader><leader>l <C-w>l
 map <leader>w :WatchForChanges<CR>
 
 " Map Control + (hl) to cycle though open buffers
-map <leader> :bp<CR>
-map <leader> :bn<CR>
+map <leader>h :bp<CR>
+map <leader>l :bn<CR>
 
 nmap <leader>c gcc
 nmap <leader>C gc
