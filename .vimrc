@@ -1,3 +1,14 @@
+if has("win32")
+	source ~\src\vimfiles\bundle\vim-pathogen\autoload\pathogen.vim
+	call pathogen#infect("~/src/vimfiles/bundle/{}")
+elseif has("win64")
+	source ~\src\vimfiles\bundle\vim-pathogen\autoload\pathogen.vim
+	call pathogen#infect("~/src/vimfiles/bundle/{}")
+else
+	call pathogen#infect("~\src\vimfiles\bundle\{}")
+	source ~/src/vimfiles/bundle/vim-pathogen/autoload/pathogen.vim
+endif
+
 " Map Control-P to print the current token class, for syntax
 " highlinghting
 nmap <C-P> :call <SID>SynStack()<CR>
@@ -12,9 +23,6 @@ endfunc
 let mapleader = ","
 
 runtime macros/matchit.vim  " enables % to cycle through `if/else/endif`
-
-" This works on *nix and windows machines, ymmv with backslash
-call pathogen#infect('~/src/vimfiles/vimfiles/bundle')
 
 " set syntax highlighting on
 syntax enable
