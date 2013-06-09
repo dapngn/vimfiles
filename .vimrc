@@ -3,7 +3,7 @@ if has("win32")
 elseif has("win64")
 	source ~\src\vimfiles\bundle\vim-pathogen\autoload\pathogen.vim
 else
-	source ~src/vimfiles/bundle/vim-pathogen/autoload/pathogen.vim
+	source ~/src/vimfiles/bundle/vim-pathogen/autoload/pathogen.vim
 endif
 	execute pathogen#infect("~/src/vimfiles/bundle/{}")
 
