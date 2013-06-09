@@ -1,12 +1,12 @@
 if has("win32")
 	source ~\src\vimfiles\bundle\vim-pathogen\autoload\pathogen.vim
-	call pathogen#infect("~/src/vimfiles/bundle/{}")
+	call pathogen#infect("~\src\vimfiles\bundle\{}")
 elseif has("win64")
 	source ~\src\vimfiles\bundle\vim-pathogen\autoload\pathogen.vim
-	call pathogen#infect("~/src/vimfiles/bundle/{}")
-else
 	call pathogen#infect("~\src\vimfiles\bundle\{}")
+else
 	source ~/src/vimfiles/bundle/vim-pathogen/autoload/pathogen.vim
+	call pathogen#infect("~/src/vimfiles/bundle/{}")
 endif
 
 " Map Control-P to print the current token class, for syntax
