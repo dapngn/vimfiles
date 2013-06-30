@@ -7,5 +7,4 @@ Vim configuration that uses [pathogen](https://github.com/tpope/vim-pathogen) as
 
 Usage
 -----
-1. Place pathogen.vim in ~/vimfiles/autoload
-3. Add 1`source [repository root]/.vimrc` line in your ~/.vimrc
+In ~/.vimrc add `so ~/src/vimfiles/.vimrc`
