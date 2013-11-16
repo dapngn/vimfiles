@@ -22,7 +22,6 @@ clonepull https://github.com/hail2u/vim-css3-syntax.git vim-css3-syntax
 clonepull https://github.com/skammer/vim-css-color.git vim-css-color
 clonepull https://github.com/pangloss/vim-javascript.git vim-javascript
 clonepull https://github.com/tpope/vim-surround.git vim-surround
-clonepull https://github.com/mattn/zencoding-vim.git zencoding-vim
 clonepull https://github.com/PProvost/vim-ps1.git vim-ps1
 clonepull https://github.com/RussMartinez/watch-and-reload.git watch-and-reload 
 clonepull https://github.com/tpope/vim-obsession.git vim-obsession
