@@ -142,7 +142,3 @@ let g:DirDiffExcludes = "bin,obj,.git,*.suo,*.user,*.dll,*.pdb,*.swp"
 
 " emmet
 nmap <leader>e <C-y>,
-
-
-"let g:user_zen_expandabbr_key = "<leader>e" 
-"let g:use_zen_complete_tag = 1
