@@ -62,21 +62,21 @@ set ruler
 " highlights search results as you are typing text
 set incsearch
 
-" Automatically create hidden buffers on leaving unsaved buffer 
+" Automatically create hidden buffers on leaving unsaved buffer> 
 set hidden
 
 " Map leader + (HJKL) to move to open windows
-map <leader><leader>h <C-w>h
-map <leader><leader>j <C-w>j
-map <leader><leader>k <C-w>k
-map <leader><leader>l <C-w>l
+noremap <leader><leader>h <C-w>h<CR>
+noremap <leader><leader>j <C-w>j<CR>
+noremap <leader><leader>k <C-w>k<CR>
+noremap <leader><leader>l <C-w>l<CR>
 
 " 
-map <leader>w :WatchForChanges<CR>
+noremap <leader>w :WatchForChanges<CR>
 
 " Map Control + (hl) to cycle though open buffers
-map <leader>h :bp<CR>
-map <leader>l :bn<CR>
+noremap <leader>h :bp<CR>
+noremap <leader>l :bn<CR>
 
 nmap <leader>c gcc
 nmap <leader>C gc
