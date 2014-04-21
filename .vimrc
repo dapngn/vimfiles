@@ -44,11 +44,11 @@ endif
 " autoread
 set autoread
 
-" set hard line break at 79 cols
-set textwidth=79
-
+" set hard line break at 80 cols
+set textwidth=80
+                                                                             
 " Insert line break as you are typing
-set formatoptions+=t
+set formatoptions+=a
 
 " number: Shows line number
 set number
@@ -96,7 +96,7 @@ nmap <leader>q :xa<CR>
 nmap ; :
 
 " expandtab/et: sets whether spaces are used rather than the tab character
-"set expandtab
+set expandtab
 
 " tabstop/ts: sets the width of a tab character
 set tabstop=2
