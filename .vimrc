@@ -48,7 +48,7 @@ set autoread
 set textwidth=80
                                                                              
 " Insert line break as you are typing
-set formatoptions+=a
+set formatoptions+=t
 
 " number: Shows line number
 set number
@@ -140,5 +140,5 @@ if has("autocmd")
 let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 let g:DirDiffExcludes = "bin,obj,.git,*.suo,*.user,*.dll,*.pdb,*.swp"
 
-" emmet
+" vim-emmet
 nmap <leader>e <C-y>,
