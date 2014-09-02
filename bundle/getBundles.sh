@@ -26,4 +26,4 @@ clonepull https://github.com/PProvost/vim-ps1.git vim-ps1
 clonepull https://github.com/RussMartinez/watch-and-reload.git watch-and-reload 
 clonepull https://github.com/tpope/vim-obsession.git vim-obsession
 clonepull https://github.com/digitaltoad/vim-jade.git vim-jade clonepull
-https://github.com/mattn/emmet-vim.git emmet-vim
+clonepull https://github.com/mattn/emmet-vim.git emmet-vim

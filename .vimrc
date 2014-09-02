@@ -134,6 +134,7 @@ if has("autocmd")
     " map xml type files to xml
     autocmd BufNewFile,BufRead *.rss,*.atom,*.csproj,*.csproj.user,*.msbuild,*.config,*.proj,*.targets setfiletype xml
 		autocmd BufNewFile,BufRead,BufWrite *.scss set filetype=scss
+		autocmd BufNewFile,BufRead,BufWrite *.csx set filetype=cs
 	endif
 
 " Super tab settings
