@@ -49,10 +49,6 @@ noremap <leader>w :WatchForChanges<CR>
 noremap <leader>h :bp<CR>
 noremap <leader>l :bn<CR>
 
-nmap <leader>c gcc
-nmap <leader>C gc
-nmap <leader>u gcu
-
 " backspace and cursor keys wrap to previous/next line
 set backspace=indent,eol,start whichwrap+=<,>,[,]
 
@@ -106,4 +102,20 @@ if has("autocmd")
 	endif
 
 " vim-emmet
+let g:user_emmet_mode='n'
 nmap <leader>e <C-y>,
+
+" nerdtree
+map <leader><leader>e :NERDTreeToggle<CR>
+
+" syntastic initial config
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_html_tidy_exec = 'C:\tools\tidy-5.2.0-win64\bin\tidy.exe'
+let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-","trimming empty"]
