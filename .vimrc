@@ -1,21 +1,5 @@
-if has("win32")
-	source ~\src\vimfiles\bundle\vim-pathogen\autoload\pathogen.vim
-elseif has("win64")
-	source ~\src\vimfiles\bundle\vim-pathogen\autoload\pathogen.vim
-else
-	source ~/src/vimfiles/bundle/vim-pathogen/autoload/pathogen.vim
-endif
-	execute pathogen#infect("~/src/vimfiles/bundle/{}")
-
-" Map Control-P to print the current token class, for syntax
-" highlinghting
-nmap <C-P> :call <SID>SynStack()<CR>
-function! <SID>SynStack()
-    if !exists("*synstack")
-        return
-    endif
-    echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-endfunc
+source ~\src\vimfiles\bundle\vim-pathogen\autoload\pathogen.vim
+execute pathogen#infect("~/src/vimfiles/bundle/{}")
 
 " map leader
 let mapleader = ","
@@ -27,19 +11,6 @@ syntax enable
 
 " force background mode to dark 
 set background=dark
-
-colorscheme solarized
-
-" gvim settings
-if has("gui_running")
-	if has("gui_macvim")
-		set guifont=Monaco:h13
-	elseif has("gui_win32")
-		set guifont=Lucida_Console:h11:cANSI
-	elseif has("gui_win32")
-		set guifont=Monaco:h16
-	endif
-endif
 
 " autoread
 set autoread
@@ -82,7 +53,6 @@ nmap <leader>c gcc
 nmap <leader>C gc
 nmap <leader>u gcu
 
-
 " backspace and cursor keys wrap to previous/next line
 set backspace=indent,eol,start whichwrap+=<,>,[,]
 
@@ -102,7 +72,7 @@ set expandtab
 set tabstop=2
 
 " softtabstop/sts: sets the width of a tab when expandtab is enabled
-"set softtabstop=4
+"set softtabstop=2
 
 " shiftwidth/sw: sets the width within normal mode indentation commands
 set shiftwidth=2
@@ -133,13 +103,7 @@ if has("autocmd")
     
     " map xml type files to xml
     autocmd BufNewFile,BufRead *.rss,*.atom,*.csproj,*.csproj.user,*.msbuild,*.config,*.proj,*.targets setfiletype xml
-		autocmd BufNewFile,BufRead,BufWrite *.scss set filetype=scss
-		autocmd BufNewFile,BufRead,BufWrite *.csx set filetype=cs
 	endif
-
-" Super tab settings
-let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
-let g:DirDiffExcludes = "bin,obj,.git,*.suo,*.user,*.dll,*.pdb,*.swp"
 
 " vim-emmet
 nmap <leader>e <C-y>,
