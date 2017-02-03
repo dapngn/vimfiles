@@ -12,6 +12,16 @@ syntax enable
 " force background mode to dark 
 set background=dark
 
+colorscheme evening 
+
+if has("gui_running")
+  if has("gui_macvim")
+ 		set guifont=Monaco:h13
+ 	elseif has("gui_win32")
+ 		set guifont=Lucida_Console:h11:cANSI
+  endif
+endif
+
 " autoread
 set autoread
 
