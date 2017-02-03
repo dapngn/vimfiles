@@ -1,4 +1,6 @@
-source ~\src\vimfiles\bundle\vim-pathogen\autoload\pathogen.vim
+"bootstrap by running first running ./bundle/getBundles.sh
+source ~/src/vimfiles/bundle/vim-pathogen/autoload/pathogen.vim
+
 execute pathogen#infect("~/src/vimfiles/bundle/{}")
 
 " map leader
@@ -17,7 +19,7 @@ colorscheme evening
 if has("gui_running")
   if has("gui_macvim")
  		set guifont=Monaco:h13
- 	elseif has("gui_win32")
+ 	elseif has("gui_win32") || has ("gui_win64")
  		set guifont=Lucida_Console:h11:cANSI
   endif
 endif
