@@ -1,4 +1,4 @@
-"bootstrap by running first running ./bundle/getBundles.sh
+"bootstrap by first running ./bundle/getBundles.sh
 source ~/src/vimfiles/bundle/vim-pathogen/autoload/pathogen.vim
 
 execute pathogen#infect("~/src/vimfiles/bundle/{}")
@@ -14,7 +14,7 @@ syntax enable
 " force background mode to dark 
 set background=dark
 
-colorscheme evening 
+colorscheme solarized 
 
 if has("gui_running")
   if has("gui_macvim")
@@ -73,17 +73,17 @@ nmap <leader>q :xa<CR>
 " map semi-colon to colon
 nmap ; :
 
+" tabstop/ts: sets the width of a tab character
+set tabstop=4
+
 " expandtab/et: sets whether spaces are used rather than the tab character
 set expandtab
 
-" tabstop/ts: sets the width of a tab character
-set tabstop=2
-
 " softtabstop/sts: sets the width of a tab when expandtab is enabled
-"set softtabstop=2
+set softtabstop=4
 
 " shiftwidth/sw: sets the width within normal mode indentation commands
-set shiftwidth=2
+set shiftwidth=4
 
 " filetype: Enables filetype detection on buffer load
 set filetype=on
