@@ -27,8 +27,8 @@ endif
 " autoread
 set autoread
 
-" set hard line break at 80 cols
-set textwidth=80
+" [disabled] set hard line break at 80 cols
+" set textwidth=80
                                                                              
 " Insert line break as you are typing
 set formatoptions+=t
